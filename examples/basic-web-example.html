@@ -6,16 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trianglify basic example</title>
     <style>
-    html, body {
-      height: 500px;
+
+    #test{
       width: 100%;
-      margin: 0 0;
-      padding: 0 0;
-      text-align: center;
-      cursor: pointer;
-      display: flex;
-      flex-align: center;
-      font-size: 0;
+      height: 500px;
     }
 
     canvas {
@@ -25,13 +19,15 @@
     </style>
   </head>
   <body>
+    <div id="test">
+    </div>
   <script src="../dist/trianglify.min.js"></script>
   <script>
     var pattern = Trianglify({
       height: window.innerHeight,
       width: window.innerWidth,
-      cell_size: 80});
-    document.body.appendChild(pattern.canvas());
+      cell_size: 120});
+    document.getElementById("test").appendChild(pattern.canvas());
   </script>
   </body>
 </html>
